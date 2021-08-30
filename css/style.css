@@ -141,6 +141,7 @@ a:focus {
   z-index: 9;
   border-radius: 9px;
 }
+html{scroll-behavior: smooth;}
 
 .back-to-top i {
   color: white;
@@ -262,7 +263,7 @@ a:focus {
 
 .navbar .navbar-brand {
   margin: 0;
-  color: #335cab;
+  color: orange;
   font-size: 45px;
   line-height: 0px;
   font-weight: 700;
