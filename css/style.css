@@ -141,7 +141,9 @@ a:focus {
   z-index: 9;
   border-radius: 9px;
 }
-html{scroll-behavior: smooth;}
+html {
+  scroll-behavior: smooth;
+}
 
 .back-to-top i {
   color: white;
@@ -686,6 +688,9 @@ html{scroll-behavior: smooth;}
 .service .service-text p {
   margin: 0;
 }
+/* Service New */
+
+/* Service New ENd */
 
 /*******************************/
 /********* Donate CSS **********/
