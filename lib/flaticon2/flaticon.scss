@@ -1,0 +1,53 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?609eb235b8fe45fadfd0ec0fcd3a9438") format("truetype"),
+url("./flaticon.woff?609eb235b8fe45fadfd0ec0fcd3a9438") format("woff"),
+url("./flaticon.woff2?609eb235b8fe45fadfd0ec0fcd3a9438") format("woff2"),
+url("./flaticon.eot?609eb235b8fe45fadfd0ec0fcd3a9438#iefix") format("embedded-opentype"),
+url("./flaticon.svg?609eb235b8fe45fadfd0ec0fcd3a9438#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "startup": "\f101",
+    "slideshow": "\f102",
+    "certificate": "\f103",
+    "trophy": "\f104",
+    "system": "\f105",
+    "pc": "\f106",
+    "training": "\f107",
+);
+
+.flaticon-startup:before {
+    content: map-get($flaticon-map, "startup");
+}
+.flaticon-slideshow:before {
+    content: map-get($flaticon-map, "slideshow");
+}
+.flaticon-certificate:before {
+    content: map-get($flaticon-map, "certificate");
+}
+.flaticon-trophy:before {
+    content: map-get($flaticon-map, "trophy");
+}
+.flaticon-system:before {
+    content: map-get($flaticon-map, "system");
+}
+.flaticon-pc:before {
+    content: map-get($flaticon-map, "pc");
+}
+.flaticon-training:before {
+    content: map-get($flaticon-map, "training");
+}
