@@ -2,6 +2,9 @@
 /********* General CSS *********/
 /*******************************/
 
+/* Font Poppin*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
 /* Warna = 335CAB */
 body {
   color: #777777;
@@ -22,6 +25,10 @@ h6 {
 a {
   color: #4a4c70;
   transition: 0.3s;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 a:hover,
@@ -158,187 +165,72 @@ html {
   color: white;
 }
 
-/**********************************/
-/********** Top Bar CSS ***********/
-/**********************************/
-.top-bar {
-  position: absolute;
-  height: 45px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+/* Navbar */
+.navbar a {
+  color: #282828;
+  font-weight: 600;
 }
 
-.top-bar .top-bar-left {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.nav-link:hover {
+  color: #7293d5;
 }
 
-.top-bar .top-bar-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.dropdown-item:hover {
+  color: #7293d5;
 }
 
-.top-bar .text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  height: 45px;
-  padding: 0 10px;
-  text-align: center;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.top-bar .text:last-child {
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.top-bar .text i {
-  font-size: 16px;
-  color: #fdbe33;
-  margin-right: 5px;
-}
-
-.top-bar .text p {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.top-bar .social {
-  display: flex;
-  height: 45px;
-  font-size: 0;
-  justify-content: flex-end;
-}
-
-.top-bar .social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 100%;
-  font-size: 16px;
-  color: #fdbe33;
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.top-bar .social a:first-child {
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.top-bar .social a:hover {
-  color: #ffffff;
-  background: #fdbe33;
-}
-
-@media (min-width: 992px) {
-  .top-bar {
-    padding: 0 60px;
-  }
-}
-
-/**********************************/
-/*********** Nav Bar CSS **********/
-/**********************************/
-
-.navbar {
-  position: relative;
+.btn-login {
+  color: white;
+  width: 7.5rem;
+  height: 40px;
+  background-color: #7293d5;
+  border-radius: 16px;
   transition: 0.5s;
-  z-index: 999;
-  height: 80px;
+  font-weight: 600;
 }
 
-.navbar.nav-sticky {
+.btn-login:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+.navbar .active {
+  color: #7293d5;
+}
+
+.toggler-icon {
+  color: #7293d5;
+  font-size: 40px;
+}
+
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.autohide {
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: 0.5s;
+  z-index: 1030;
 }
 
-.navbar .navbar-brand {
-  margin: 0;
-  color: orange;
-  font-size: 45px;
-  line-height: 0px;
-  font-weight: 700;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+.navbar .nav-item {
+  padding: 0px 5px;
 }
 
-.navbar .navbar-brand img {
-  max-width: 100%;
-  max-height: 40px;
+.dropdown-toggle::after {
+  content: none;
 }
 
-.navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  padding: 10px 15px 8px 15px;
-  color: black;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #335cab;
-  transition: none;
-}
-
-.navbar .dropdown-menu {
-  margin-top: 0;
-  border: 0;
-  border-radius: 0;
-  background: #f8f9fa;
-}
-
-@media (min-width: 992px) {
-  .navbar {
-    position: absolute;
-    width: 100%;
-    padding: 20px 60px;
-    background: transparent !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 9;
-  }
-
-  .navbar.nav-sticky {
-    padding: 10px 60px;
-    background: white !important;
-    border-bottom: none;
-  }
-
-  .page .navbar {
-    background: #20212b !important;
-  }
-
-  .navbar a.nav-link {
-    padding: 8px 15px;
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .navbar {
-    padding: 15px;
-    background: #20212b !important;
-  }
-
-  .navbar a.nav-link {
-    padding: 5px;
-  }
-
-  .navbar .dropdown-menu {
-    box-shadow: none;
-  }
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 /*******************************/
@@ -351,6 +243,7 @@ html {
 
 .carousel-item {
   height: 764px;
+  width: 100%;
 }
 
 .carousel-btn {
